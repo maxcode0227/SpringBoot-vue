@@ -1,17 +1,16 @@
-package com.boylegu.springboot_vue.controller.pagination;
+package com.maxcode.buyer.controller.pagination;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import com.maxcode.buyer.dao.PersonsRepository;
+import com.maxcode.buyer.entities.Persons;
 import org.springframework.stereotype.Component;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Page;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
-
-import com.boylegu.springboot_vue.dao.PersonsRepository;
-import com.boylegu.springboot_vue.entities.Persons;
 
 
 /*

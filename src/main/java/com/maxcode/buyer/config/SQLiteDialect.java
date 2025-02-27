@@ -1,4 +1,4 @@
-package com.boylegu.springboot_vue.config;
+package com.maxcode.buyer.config;
 
 import java.sql.Types;
 

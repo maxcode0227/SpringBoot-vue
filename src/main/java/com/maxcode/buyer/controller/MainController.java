@@ -1,7 +1,8 @@
-package com.boylegu.springboot_vue.controller;
+package com.maxcode.buyer.controller;
 
-import com.boylegu.springboot_vue.entities.Persons;
+import com.maxcode.buyer.entities.Persons;
 
+import com.maxcode.buyer.dao.PersonsRepository;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,9 +19,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.domain.PageRequest;
 
-import com.boylegu.springboot_vue.dao.PersonsRepository;
-import com.boylegu.springboot_vue.controller.pagination.PaginationMultiTypeValuesHelper;
-import com.boylegu.springboot_vue.controller.pagination.PaginationFormatting;
+import com.maxcode.buyer.controller.pagination.PaginationMultiTypeValuesHelper;
+import com.maxcode.buyer.controller.pagination.PaginationFormatting;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package com.boylegu.springboot_vue.controller.pagination;
+package com.maxcode.buyer.controller.pagination;
 
 public class PaginationMultiTypeValuesHelper {
 

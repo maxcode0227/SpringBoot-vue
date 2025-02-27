@@ -1,4 +1,4 @@
-package com.boylegu.springboot_vue;
+package com.maxcode.buyer;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

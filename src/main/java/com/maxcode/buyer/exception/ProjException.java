@@ -1,4 +1,4 @@
-package com.boylegu.springboot_vue.exception;
+package com.maxcode.buyer.exception;
 
 /**
  * Created by gubaoer on 17/7/2.

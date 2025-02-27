@@ -1,4 +1,4 @@
-package com.boylegu.springboot_vue.dao;
+package com.maxcode.buyer.dao;
 
 /**
  * Created by gubaoer on 17/7/2.
