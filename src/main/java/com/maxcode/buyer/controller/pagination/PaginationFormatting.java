@@ -6,11 +6,12 @@ import java.util.Map;
 import com.maxcode.buyer.dao.PersonsRepository;
 import com.maxcode.buyer.entities.Persons;
 import org.springframework.stereotype.Component;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Page;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 
 
 /*
@@ -65,7 +66,7 @@ class SpringUtil implements ApplicationContextAware {
 
 interface Types {
 
-    public Page<Persons> query();
+    public IPage<Persons> query();
 
     public Integer getCount();
 
@@ -78,15 +79,15 @@ interface Types {
 
 class BasePaginationInfo {
 
-    public Pageable pageable;
+    public Page<Persons> pageable;
 
     public PersonsRepository instance = SpringUtil.getBean(PersonsRepository.class);
 
     public String sex, email;
 
-    public BasePaginationInfo(String sexName, String emailName, Pageable pageable) {
+    public BasePaginationInfo(String sexName, String emailName, int pageNum, int pageSize) {
 
-        this.pageable = pageable;
+        this.pageable = new Page<>(pageNum, pageSize);
 
         this.sex = sexName;
 
@@ -97,49 +98,50 @@ class BasePaginationInfo {
 class AllType extends BasePaginationInfo implements Types {
 
 
-    public AllType(String sexName, String emailName, Pageable pageable) { //String sexName, String emailName,
+    public AllType(String sexName, String emailName, int pageNum, int pageSize) {
 
-        super(sexName, emailName, pageable);
+        super(sexName, emailName, pageNum, pageSize);
 
     }
 
-    public Page<Persons> query() {
+    public IPage<Persons> query() {
 
-        return this.instance.findAll(
+        return this.instance.selectPage(
 
-                this.pageable
+                this.pageable,
+                null
 
         );
     }
 
     public Integer getCount() {
-        return this.query().getSize();
+        return (int)this.query().getSize();
     }
 
     public Integer getPageNumber() {
 
-        return this.query().getNumber();
+        return (int)this.query().getCurrent();
 
     }
 
     public Long getTotal() {
-        return this.query().getTotalElements();
+        return this.query().getTotal();
     }
 
     public Object getContent() {
-        return this.query().getContent();
+        return this.query().getRecords();
     }
 }
 
 class SexEmailType extends BasePaginationInfo implements Types {
 
-    public SexEmailType(String sexName, String emailName, Pageable pageable) {
+    public SexEmailType(String sexName, String emailName, int pageNum, int pageSize) {
 
-        super(sexName, emailName, pageable);
+        super(sexName, emailName, pageNum, pageSize);
 
     }
 
-    public Page<Persons> query() {
+    public IPage<Persons> query() {
 
         return this.instance.findBySexAndEmailContains(
 
@@ -152,21 +154,21 @@ class SexEmailType extends BasePaginationInfo implements Types {
     }
 
     public Integer getCount() {
-        return this.query().getSize();
+        return (int)this.query().getSize();
     }
 
     public Integer getPageNumber() {
 
-        return this.query().getNumber();
+        return (int)this.query().getCurrent();
 
     }
 
     public Long getTotal() {
-        return this.query().getTotalElements();
+        return this.query().getTotal();
     }
 
     public Object getContent() {
-        return this.query().getContent();
+        return this.query().getRecords();
     }
 
 
@@ -174,12 +176,12 @@ class SexEmailType extends BasePaginationInfo implements Types {
 
 class SexType extends BasePaginationInfo implements Types {
 
-    public SexType(String sexName, String emailName, Pageable pageable) { //String sexName, String emailName,
+    public SexType(String sexName, String emailName, int pageNum, int pageSize) {
 
-        super(sexName, emailName, pageable);
+        super(sexName, emailName, pageNum, pageSize);
     }
 
-    public Page<Persons> query() {
+    public IPage<Persons> query() {
 
         return this.instance.findBySex(
 
@@ -190,21 +192,21 @@ class SexType extends BasePaginationInfo implements Types {
     }
 
     public Integer getCount() {
-        return this.query().getSize();
+        return (int)this.query().getSize();
     }
 
     public Integer getPageNumber() {
 
-        return this.query().getNumber();
+        return (int)this.query().getCurrent();
 
     }
 
     public Long getTotal() {
-        return this.query().getTotalElements();
+        return this.query().getTotal();
     }
 
     public Object getContent() {
-        return this.query().getContent();
+        return this.query().getRecords();
     }
 }
 
@@ -215,33 +217,32 @@ public class PaginationFormatting {
 
     private Map<String, PaginationMultiTypeValuesHelper> results = new HashMap<>();
 
-    public Map<String, PaginationMultiTypeValuesHelper> filterQuery(String sex, String email, Pageable pageable) {
-
-        Types typeInstance;
-
-        if (sex.length() == 0 && email.length() == 0) {
-
-            typeInstance = new AllType(sex, email, pageable);
-
-        } else if (sex.length() > 0 && email.length() > 0) {
-
-            typeInstance = new SexEmailType(sex, email, pageable);
-
-        } else {
-            typeInstance = new SexType(sex, email, pageable);
-        }
-
-        this.multiValue.setCount(typeInstance.getCount());
-
-        this.multiValue.setPage(typeInstance.getPageNumber() + 1);
-
-        this.multiValue.setResults(typeInstance.getContent());
-
-        this.multiValue.setTotal(typeInstance.getTotal());
-
-        this.results.put("data", this.multiValue);
-
-        return results;
+    public Map<String, PaginationMultiTypeValuesHelper> filterQuery(
+            QueryWrapper<Persons> queryWrapper, 
+            Page<Persons> page) {
+        // 实现分页查询逻辑
+        // 返回分页结果
+        Map<String, PaginationMultiTypeValuesHelper> result = new HashMap<>();
+        // ... 实现分页逻辑 ...
+        return result;
     }
 
+    public Map<String, PaginationMultiTypeValuesHelper> selectPage(QueryWrapper<Persons> queryWrapper, Page<Persons> page) {
+        // 创建返回结果Map
+        Map<String, PaginationMultiTypeValuesHelper> resultMap = new HashMap<>();
+        
+        // 创建分页结果对象
+        PaginationMultiTypeValuesHelper paginationHelper = new PaginationMultiTypeValuesHelper();
+        
+        // 设置分页信息
+        paginationHelper.setTotal(page.getTotal());
+        paginationHelper.setCurrentPage((int)page.getCurrent());
+        paginationHelper.setTotalPage((int)page.getPages());
+        paginationHelper.setResults(page.getRecords());
+        
+        // 将分页结果放入Map
+        resultMap.put("pagination", paginationHelper);
+        
+        return resultMap;
+    }
 }

@@ -14,16 +14,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.domain.Sort.Direction;
-import org.springframework.data.domain.PageRequest;
 
 import com.maxcode.buyer.controller.pagination.PaginationMultiTypeValuesHelper;
 import com.maxcode.buyer.controller.pagination.PaginationFormatting;
 
 import java.util.*;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
 @RestController
 @RequestMapping("/api/persons")
@@ -106,21 +104,28 @@ public class MainController {
          */
 
         if (pages == null) {
-
             pages = 1;
-
         }
 
-        Sort sort = new Sort(Direction.ASC, "id");
-
-        Pageable pageable = new PageRequest(pages - 1, maxPerPage, sort);
+        // 使用MyBatis-Plus的分页
+        Page<Persons> pageable = new Page<>(pages - 1, maxPerPage);
+        
+        // 构建查询条件
+        QueryWrapper<Persons> queryWrapper = new QueryWrapper<>();
+        queryWrapper.orderByAsc("id");
+        
+        if (sex != null && !sex.isEmpty()) {
+            queryWrapper.eq("sex", sex);
+        }
+        if (email != null && !email.isEmpty()) {
+            queryWrapper.eq("email", email);
+        }
 
         PaginationFormatting paginInstance = new PaginationFormatting();
-
-        return paginInstance.filterQuery(sex, email, pageable);
+        return paginInstance.filterQuery(queryWrapper, pageable);
     }
 
-    @RequestMapping(value = "/detail/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/detail/{id}", method = RequestMethod.GET)
     public ResponseEntity<Persons> getUserDetail(@PathVariable Long id) {
 
         /*
@@ -141,12 +146,12 @@ public class MainController {
         *    @apiSuccess {String} zone
         */
 
-        Persons user = personsRepository.findById(id);
+        Persons user = personsRepository.selectById(id);
 
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
-    @RequestMapping(value = "/detail/{id}", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/detail/{id}", method = RequestMethod.PUT)
     public Persons updateUser(@PathVariable Long id, @RequestBody Persons data) {
 
         /*
@@ -167,13 +172,15 @@ public class MainController {
          *  @apiSuccess {String} zone
 
         */
-        Persons user = personsRepository.findById(id);
+        Persons user = personsRepository.selectById(id);
 
-        user.setPhone(data.getPhone());
+        if (user != null) {
+            user.setPhone(data.getPhone());
+            user.setZone(data.getZone());
+            personsRepository.updateById(user);
+        }
 
-        user.setZone(data.getZone());
-
-        return personsRepository.save(user);
+        return user;
     }
 
 }

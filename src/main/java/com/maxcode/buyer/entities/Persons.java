@@ -1,94 +1,20 @@
 package com.maxcode.buyer.entities;
 
-import javax.persistence.*;
-import java.io.Serializable;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
-
-@Entity
-@Table(name = "persons")
-public class Persons implements Serializable {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
-
-    @Column(name = "create_datetime")
-    /*
-       @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-       @JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ", locale = "zh", timezone = "UTC")
-       @Type(type="datetime")
-    */
-    private String create_datetime;
-
-    @Column(name = "username")
+@Data
+@TableName("persons")
+public class Persons {
+    @TableId(type = IdType.AUTO)
+    private Long id;
     private String username;
-
-    @Column(name = "email")
     private String email;
-
-    @Column(name = "phone")
     private String phone;
-
-    @Column(name = "sex")
     private String sex;
-
-    @Column(name = "zone")
     private String zone;
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getCreate_datetime() {
-        return create_datetime;
-
-    }
-
-    public void setCreate_datetime(String create_datetime) {
-        this.create_datetime = create_datetime;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
-
-    public String getZone() {
-        return zone;
-    }
-
-    public void setZone(String zone) {
-        this.zone = zone;
-    }
+    private String createDatetime;
+    // 其他字段根据需要添加
 }

@@ -46,4 +46,25 @@ public class ProjExceptionHandler {
         return r;
     }
 
+    public static void main(String[] args) {
+        long l = countPositiveSolutions(100);
+        System.out.println(l);
+    }
+
+   
+    public static long countSolutions(int n) {
+        // 使用long避免溢出
+        long result = (long)(n + 1) * (n + 2) / 2;
+        return result;
+    }
+
+    public static long countPositiveSolutions(int n) {
+        if (n < 3) {
+            return 0;
+        }
+        // 使用long避免溢出
+        long m = n - 1;
+        return (m * (m - 1)) / 2;
+    }
+
 }
