@@ -1,0 +1,436 @@
+2025-03-04 14:49:31.479 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 32088 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 14:49:31.497 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 14:49:31.498 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 14:49:31.574 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-04 14:49:31.575 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-04 14:49:33.351 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8000 (http)
+2025-03-04 14:49:33.363 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8000"]
+2025-03-04 14:49:33.364 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 14:49:33.364 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 14:49:33.450 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 14:49:33.450 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1874 ms
+2025-03-04 14:49:39.643 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 14:49:39.666 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8000"]
+2025-03-04 14:49:39.691 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8000 (http) with context path ''
+2025-03-04 14:49:39.708 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 8.906 seconds (JVM running for 11.314)
+2025-03-04 14:49:53.560 [http-nio-8000-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-04 14:49:53.560 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-04 14:49:53.561 [http-nio-8000-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-03-04 14:49:53.589 [http-nio-8000-exec-1] INFO  c.maxcode.buyer.config.WebLogAspect - URL : http://localhost:8000/api/accounts
+2025-03-04 14:49:53.589 [http-nio-8000-exec-1] INFO  c.maxcode.buyer.config.WebLogAspect - HTTP_METHOD : GET
+2025-03-04 14:49:53.589 [http-nio-8000-exec-1] INFO  c.maxcode.buyer.config.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2025-03-04 14:49:53.590 [http-nio-8000-exec-1] INFO  c.maxcode.buyer.config.WebLogAspect - CLASS_METHOD : com.maxcode.buyer.controller.AccountController.getAccounts
+2025-03-04 14:49:53.590 [http-nio-8000-exec-1] INFO  c.maxcode.buyer.config.WebLogAspect - ARGS : [1, test, 1]
+2025-03-04 14:49:53.672 [http-nio-8000-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-04 14:49:55.816 [http-nio-8000-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-04 14:49:55.986 [http-nio-8000-exec-1] INFO  c.maxcode.buyer.config.WebLogAspect - RESPONSE : <200 OK OK,{totalPages=0, currentPage=1, content=[], totalElements=0},[]>
+2025-03-04 14:49:55.986 [http-nio-8000-exec-1] INFO  c.maxcode.buyer.config.WebLogAspect - SPEND TIME : 2398
+2025-03-04 14:50:25.705 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 1600 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 14:50:25.708 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 14:50:25.710 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 14:50:25.843 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-04 14:50:25.844 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-04 14:50:27.932 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 14:50:27.950 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-04 14:50:27.952 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 14:50:27.952 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 14:50:28.064 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 14:50:28.064 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2219 ms
+2025-03-04 14:50:32.087 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 14:50:32.129 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-04 14:50:32.154 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 14:50:32.170 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 7.549 seconds (JVM running for 16.503)
+2025-03-04 14:54:05.784 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-04 14:54:05.784 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-04 14:54:05.785 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-03-04 14:54:05.804 [http-nio-8080-exec-1] INFO  c.maxcode.buyer.config.WebLogAspect - URL : http://localhost:8080/api/accounts
+2025-03-04 14:54:05.805 [http-nio-8080-exec-1] INFO  c.maxcode.buyer.config.WebLogAspect - HTTP_METHOD : GET
+2025-03-04 14:54:05.805 [http-nio-8080-exec-1] INFO  c.maxcode.buyer.config.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2025-03-04 14:54:05.805 [http-nio-8080-exec-1] INFO  c.maxcode.buyer.config.WebLogAspect - CLASS_METHOD : com.maxcode.buyer.controller.AccountController.getAccounts
+2025-03-04 14:54:05.805 [http-nio-8080-exec-1] INFO  c.maxcode.buyer.config.WebLogAspect - ARGS : [1, test, 1]
+2025-03-04 14:54:05.853 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-04 14:54:07.092 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-04 14:54:07.208 [http-nio-8080-exec-1] INFO  c.maxcode.buyer.config.WebLogAspect - RESPONSE : <200 OK OK,{totalPages=0, currentPage=1, content=[], totalElements=0},[]>
+2025-03-04 14:54:07.208 [http-nio-8080-exec-1] INFO  c.maxcode.buyer.config.WebLogAspect - SPEND TIME : 1404
+2025-03-04 14:54:12.549 [http-nio-8080-exec-3] INFO  c.maxcode.buyer.config.WebLogAspect - URL : http://localhost:8080/api/accounts
+2025-03-04 14:54:12.549 [http-nio-8080-exec-3] INFO  c.maxcode.buyer.config.WebLogAspect - HTTP_METHOD : GET
+2025-03-04 14:54:12.549 [http-nio-8080-exec-3] INFO  c.maxcode.buyer.config.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2025-03-04 14:54:12.549 [http-nio-8080-exec-3] INFO  c.maxcode.buyer.config.WebLogAspect - CLASS_METHOD : com.maxcode.buyer.controller.AccountController.getAccounts
+2025-03-04 14:54:12.549 [http-nio-8080-exec-3] INFO  c.maxcode.buyer.config.WebLogAspect - ARGS : [1, test, 2]
+2025-03-04 14:54:12.941 [http-nio-8080-exec-3] INFO  c.maxcode.buyer.config.WebLogAspect - RESPONSE : <200 OK OK,{totalPages=0, currentPage=1, content=[], totalElements=0},[]>
+2025-03-04 14:54:12.941 [http-nio-8080-exec-3] INFO  c.maxcode.buyer.config.WebLogAspect - SPEND TIME : 392
+2025-03-04 14:54:22.655 [http-nio-8080-exec-7] INFO  c.maxcode.buyer.config.WebLogAspect - URL : http://localhost:8080/api/accounts
+2025-03-04 14:54:22.655 [http-nio-8080-exec-7] INFO  c.maxcode.buyer.config.WebLogAspect - HTTP_METHOD : GET
+2025-03-04 14:54:22.655 [http-nio-8080-exec-7] INFO  c.maxcode.buyer.config.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2025-03-04 14:54:22.655 [http-nio-8080-exec-7] INFO  c.maxcode.buyer.config.WebLogAspect - CLASS_METHOD : com.maxcode.buyer.controller.AccountController.getAccounts
+2025-03-04 14:54:22.655 [http-nio-8080-exec-7] INFO  c.maxcode.buyer.config.WebLogAspect - ARGS : [1, test, null]
+2025-03-04 14:54:22.765 [http-nio-8080-exec-7] INFO  c.maxcode.buyer.config.WebLogAspect - RESPONSE : <200 OK OK,{totalPages=0, currentPage=1, content=[], totalElements=0},[]>
+2025-03-04 14:54:22.765 [http-nio-8080-exec-7] INFO  c.maxcode.buyer.config.WebLogAspect - SPEND TIME : 110
+2025-03-04 14:54:34.831 [http-nio-8080-exec-5] INFO  c.maxcode.buyer.config.WebLogAspect - URL : http://localhost:8080/api/accounts
+2025-03-04 14:54:34.831 [http-nio-8080-exec-5] INFO  c.maxcode.buyer.config.WebLogAspect - HTTP_METHOD : GET
+2025-03-04 14:54:34.831 [http-nio-8080-exec-5] INFO  c.maxcode.buyer.config.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2025-03-04 14:54:34.831 [http-nio-8080-exec-5] INFO  c.maxcode.buyer.config.WebLogAspect - CLASS_METHOD : com.maxcode.buyer.controller.AccountController.getAccounts
+2025-03-04 14:54:34.831 [http-nio-8080-exec-5] INFO  c.maxcode.buyer.config.WebLogAspect - ARGS : [1, zhangsan, 2]
+2025-03-04 14:54:35.021 [http-nio-8080-exec-5] INFO  c.maxcode.buyer.config.WebLogAspect - RESPONSE : <200 OK OK,{totalPages=1, currentPage=1, content=[Account(id=1, username=zhangsan, avatarUrl=https://example.com/avatars/zhangsan.jpg, gender=男, withdrawPassword=4c124599f9dd30639f5baa2c3f4e8dd4, loginPassword=2446d54c2e68d221db9cff653b01a0eb, vipLevel=2, createTime=2025-03-04 06:41:05, updateTime=2025-03-04 06:41:05)], totalElements=1},[]>
+2025-03-04 14:54:35.021 [http-nio-8080-exec-5] INFO  c.maxcode.buyer.config.WebLogAspect - SPEND TIME : 190
+2025-03-04 14:54:42.582 [http-nio-8080-exec-6] INFO  c.maxcode.buyer.config.WebLogAspect - URL : http://localhost:8080/api/accounts
+2025-03-04 14:54:42.584 [http-nio-8080-exec-6] INFO  c.maxcode.buyer.config.WebLogAspect - HTTP_METHOD : GET
+2025-03-04 14:54:42.584 [http-nio-8080-exec-6] INFO  c.maxcode.buyer.config.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2025-03-04 14:54:42.584 [http-nio-8080-exec-6] INFO  c.maxcode.buyer.config.WebLogAspect - CLASS_METHOD : com.maxcode.buyer.controller.AccountController.getAccounts
+2025-03-04 14:54:42.584 [http-nio-8080-exec-6] INFO  c.maxcode.buyer.config.WebLogAspect - ARGS : [1, null, null]
+2025-03-04 14:54:42.836 [http-nio-8080-exec-6] INFO  c.maxcode.buyer.config.WebLogAspect - RESPONSE : <200 OK OK,{totalPages=2, currentPage=1, content=[Account(id=1, username=zhangsan, avatarUrl=https://example.com/avatars/zhangsan.jpg, gender=男, withdrawPassword=4c124599f9dd30639f5baa2c3f4e8dd4, loginPassword=2446d54c2e68d221db9cff653b01a0eb, vipLevel=2, createTime=2025-03-04 06:41:05, updateTime=2025-03-04 06:41:05), Account(id=2, username=lisi, avatarUrl=https://example.com/avatars/lisi.jpg, gender=女, withdrawPassword=66acab6a216c07b6bf24d16787be13db, loginPassword=1af0cbd1bf7482ecf853126c0319e6ef, vipLevel=1, createTime=2025-03-04 06:41:05, updateTime=2025-03-04 06:41:05), Account(id=3, username=wangwu, avatarUrl=https://example.com/avatars/wangwu.jpg, gender=男, withdrawPassword=90030ed3d2cb94742a1dece1193c3569, loginPassword=70b1b37760936cf57adc21ada707f5b1, vipLevel=3, createTime=2025-03-04 06:41:05, updateTime=2025-03-04 06:41:05), Account(id=4, username=zhaoliu, avatarUrl=https://example.com/avatars/zhaoliu.jpg, gender=女, withdrawPassword=4296942e45065dfd0a8d3ac225b772c8, loginPassword=01408d9b1298dcef1192a7dcee462ed8, vipLevel=1, createTime=2025-03-04 06:41:05, updateTime=2025-03-04 06:41:05), Account(id=5, username=qianqi, avatarUrl=https://example.com/avatars/qianqi.jpg, gender=男, withdrawPassword=e7da09f2d6c60251c7283647ad01a7a1, loginPassword=bcc7efb78e30e63434b650c926a5925e, vipLevel=4, createTime=2025-03-04 06:41:05, updateTime=2025-03-04 06:41:05), Account(id=6, username=sunba, avatarUrl=https://example.com/avatars/sunba.jpg, gender=女, withdrawPassword=75886873a65fb17fe0c94df735fcebed, loginPassword=aa6e8e09378d9eae892aa906abd53b58, vipLevel=2, createTime=2025-03-04 06:41:05, updateTime=2025-03-04 06:41:05), Account(id=7, username=zhoujiu, avatarUrl=https://example.com/avatars/zhoujiu.jpg, gender=男, withdrawPassword=8723f793c38b9ace7c0b2a38300acbea, loginPassword=f4e22cfd4da6c19162ff059d3ed28afb, vipLevel=1, createTime=2025-03-04 06:41:05, updateTime=2025-03-04 06:41:05)], totalElements=10},[]>
+2025-03-04 14:54:42.836 [http-nio-8080-exec-6] INFO  c.maxcode.buyer.config.WebLogAspect - SPEND TIME : 254
+2025-03-04 14:54:51.312 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - URL : http://localhost:8080/api/accounts
+2025-03-04 14:54:51.312 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - HTTP_METHOD : GET
+2025-03-04 14:54:51.313 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2025-03-04 14:54:51.313 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - CLASS_METHOD : com.maxcode.buyer.controller.AccountController.getAccounts
+2025-03-04 14:54:51.313 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - ARGS : [1, zhangsan, 2]
+2025-03-04 14:54:51.600 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - RESPONSE : <200 OK OK,{totalPages=1, currentPage=1, content=[Account(id=1, username=zhangsan, avatarUrl=https://example.com/avatars/zhangsan.jpg, gender=男, withdrawPassword=4c124599f9dd30639f5baa2c3f4e8dd4, loginPassword=2446d54c2e68d221db9cff653b01a0eb, vipLevel=2, createTime=2025-03-04 06:41:05, updateTime=2025-03-04 06:41:05)], totalElements=1},[]>
+2025-03-04 14:54:51.600 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - SPEND TIME : 288
+2025-03-04 15:00:12.783 [Thread-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-04 15:00:42.795 [Thread-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-04 15:00:43.061 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 1600 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 15:00:43.061 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 15:00:43.062 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 15:00:43.480 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 15:00:43.481 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:00:43.482 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 15:00:43.482 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 15:00:43.502 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 15:00:43.502 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 436 ms
+2025-03-04 15:00:45.485 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 15:00:45.496 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:00:45.500 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 15:00:45.510 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 2.501 seconds (JVM running for 629.843)
+2025-03-04 15:00:45.514 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-04 15:00:48.785 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 1600 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 15:00:48.786 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 15:00:48.786 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 15:00:49.116 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 15:00:49.117 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:00:49.117 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 15:00:49.117 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 15:00:49.134 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 15:00:49.135 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 345 ms
+2025-03-04 15:00:50.966 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 15:00:50.979 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:00:50.982 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 15:00:50.988 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 2.255 seconds (JVM running for 635.321)
+2025-03-04 15:00:50.989 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-04 15:00:52.335 [HikariPool-1 connection adder] INFO  com.zaxxer.hikari.util.ConcurrentBag - ConcurrentBag has been closed, ignoring add()
+2025-03-04 15:01:29.884 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 1600 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 15:01:29.884 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 15:01:29.885 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 15:01:30.101 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 15:01:30.103 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:01:30.103 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 15:01:30.103 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 15:01:30.117 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 15:01:30.118 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 231 ms
+2025-03-04 15:01:31.057 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 15:01:31.067 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:01:31.069 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 15:01:31.074 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 1.213 seconds (JVM running for 675.408)
+2025-03-04 15:01:31.075 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-04 15:02:04.533 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 15916 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 15:02:04.535 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 15:02:04.536 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 15:02:04.642 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-04 15:02:04.643 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-04 15:02:07.641 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 15:02:07.657 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:02:07.659 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 15:02:07.659 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 15:02:07.773 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 15:02:07.774 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3116 ms
+2025-03-04 15:02:11.103 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 15:02:11.130 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:02:11.160 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 15:02:11.177 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 7.797 seconds (JVM running for 11.984)
+2025-03-04 15:03:53.414 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-04 15:03:53.414 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-04 15:03:53.415 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-03-04 15:03:53.484 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - URL : http://localhost:8080/api/accounts/login
+2025-03-04 15:03:53.484 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - HTTP_METHOD : POST
+2025-03-04 15:03:53.485 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2025-03-04 15:03:53.486 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - CLASS_METHOD : com.maxcode.buyer.controller.AccountController.login
+2025-03-04 15:03:53.486 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - ARGS : [{username=testuser, password=123456}]
+2025-03-04 15:03:53.548 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-04 15:03:54.685 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-04 15:03:54.850 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: <EOL><EOL>### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'password' in 'where clause'<EOL><EOL>### The error may exist in com/maxcode/buyer/dao/AccountRepository.java (best guess)<EOL><EOL>### The error may involve defaultParameterMap<EOL><EOL>### The error occurred while setting parameters<EOL><EOL>### SQL: SELECT  id,username,avatar_url,gender,withdraw_password,login_password,vip_level,create_time,update_time  FROM accounts     WHERE (username = ? AND password = ?)<EOL><EOL>### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'password' in 'where clause'<EOL>; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'password' in 'where clause']
+2025-03-04 15:04:36.200 [Thread-12] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-04 15:04:37.108 [Thread-12] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-04 15:04:37.368 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 15916 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 15:04:37.369 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 15:04:37.369 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 15:04:38.042 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 15:04:38.043 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:04:38.043 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 15:04:38.044 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 15:04:38.062 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 15:04:38.063 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 689 ms
+2025-03-04 15:04:39.810 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 15:04:39.831 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:04:39.846 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 15:04:39.861 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 2.543 seconds (JVM running for 160.668)
+2025-03-04 15:04:39.865 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-04 15:05:09.369 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 22344 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 15:05:09.371 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 15:05:09.373 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 15:05:09.455 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-04 15:05:09.455 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-04 15:05:11.424 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 15:05:11.437 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:05:11.438 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 15:05:11.439 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 15:05:11.525 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 15:05:11.525 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2069 ms
+2025-03-04 15:05:15.140 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 15:05:15.176 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:05:15.208 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 15:05:15.225 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 6.766 seconds (JVM running for 12.915)
+2025-03-04 15:05:16.804 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-04 15:05:16.804 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-04 15:05:16.805 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-03-04 15:05:16.903 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - URL : http://localhost:8080/api/accounts/login
+2025-03-04 15:05:16.904 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - HTTP_METHOD : POST
+2025-03-04 15:05:16.904 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2025-03-04 15:05:16.906 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - CLASS_METHOD : com.maxcode.buyer.controller.AccountController.login
+2025-03-04 15:05:16.906 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - ARGS : [{username=testuser, password=123456}]
+2025-03-04 15:05:17.016 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-04 15:05:17.969 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-04 15:05:18.188 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.jdbc.BadSqlGrammarException: <EOL><EOL>### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'loginPassword' in 'where clause'<EOL><EOL>### The error may exist in com/maxcode/buyer/dao/AccountRepository.java (best guess)<EOL><EOL>### The error may involve defaultParameterMap<EOL><EOL>### The error occurred while setting parameters<EOL><EOL>### SQL: SELECT  id,username,avatar_url,gender,withdraw_password,login_password,vip_level,create_time,update_time  FROM accounts     WHERE (username = ? AND loginPassword = ?)<EOL><EOL>### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'loginPassword' in 'where clause'<EOL>; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'loginPassword' in 'where clause']
+2025-03-04 15:07:08.267 [Thread-12] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-04 15:07:08.275 [Thread-12] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-04 15:07:08.441 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 22344 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 15:07:08.441 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 15:07:08.442 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 15:07:08.616 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 15:07:08.616 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:07:08.616 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 15:07:08.616 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 15:07:08.622 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 15:07:08.622 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 178 ms
+2025-03-04 15:07:09.239 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 15:07:09.247 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:07:09.249 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 15:07:09.252 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 0.84 seconds (JVM running for 126.941)
+2025-03-04 15:07:09.253 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-04 15:07:16.152 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 22344 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 15:07:16.152 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 15:07:16.152 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 15:07:16.434 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 15:07:16.435 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:07:16.435 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 15:07:16.435 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 15:07:16.447 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 15:07:16.448 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 291 ms
+2025-03-04 15:07:17.567 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 15:07:17.578 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:07:17.582 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 15:07:17.586 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 1.472 seconds (JVM running for 135.276)
+2025-03-04 15:07:17.587 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-04 15:07:19.894 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 22344 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 15:07:19.895 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 15:07:19.895 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 15:07:20.199 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 15:07:20.200 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:07:20.200 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 15:07:20.200 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 15:07:20.211 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 15:07:20.212 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 314 ms
+2025-03-04 15:07:49.362 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 30124 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 15:07:49.365 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 15:07:49.366 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 15:07:49.492 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-03-04 15:07:49.493 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-03-04 15:07:52.779 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 15:07:52.802 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:07:52.804 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 15:07:52.805 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 15:07:52.981 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 15:07:52.982 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3487 ms
+2025-03-04 15:07:56.737 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 15:07:56.756 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:07:56.781 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 15:07:56.794 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 8.577 seconds (JVM running for 13.544)
+2025-03-04 15:08:15.064 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-04 15:08:15.064 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-04 15:08:15.064 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2025-03-04 15:08:15.128 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - URL : http://localhost:8080/api/accounts/login
+2025-03-04 15:08:15.128 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - HTTP_METHOD : POST
+2025-03-04 15:08:15.128 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2025-03-04 15:08:15.128 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - CLASS_METHOD : com.maxcode.buyer.controller.AccountController.login
+2025-03-04 15:08:15.128 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - ARGS : [{username=testuser, password=123456}]
+2025-03-04 15:08:15.158 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-03-04 15:08:37.478 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-03-04 15:08:37.582 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - RESPONSE : <401 UNAUTHORIZED Unauthorized,{message=用户名或密码错误, status=error},[]>
+2025-03-04 15:08:37.582 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - SPEND TIME : 22454
+2025-03-04 15:09:10.957 [http-nio-8080-exec-6] INFO  c.maxcode.buyer.config.WebLogAspect - URL : http://localhost:8080/api/accounts/login
+2025-03-04 15:09:10.957 [http-nio-8080-exec-6] INFO  c.maxcode.buyer.config.WebLogAspect - HTTP_METHOD : POST
+2025-03-04 15:09:10.957 [http-nio-8080-exec-6] INFO  c.maxcode.buyer.config.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2025-03-04 15:09:10.957 [http-nio-8080-exec-6] INFO  c.maxcode.buyer.config.WebLogAspect - CLASS_METHOD : com.maxcode.buyer.controller.AccountController.login
+2025-03-04 15:09:10.957 [http-nio-8080-exec-6] INFO  c.maxcode.buyer.config.WebLogAspect - ARGS : [{username=zhangsan, password=login123}]
+2025-03-04 15:09:11.131 [http-nio-8080-exec-6] INFO  c.maxcode.buyer.config.WebLogAspect - RESPONSE : <401 UNAUTHORIZED Unauthorized,{message=用户名或密码错误, status=error},[]>
+2025-03-04 15:09:11.131 [http-nio-8080-exec-6] INFO  c.maxcode.buyer.config.WebLogAspect - SPEND TIME : 174
+2025-03-04 15:09:41.527 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - URL : http://localhost:8080/api/accounts/login
+2025-03-04 15:09:41.527 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - HTTP_METHOD : POST
+2025-03-04 15:09:41.527 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2025-03-04 15:09:41.528 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - CLASS_METHOD : com.maxcode.buyer.controller.AccountController.login
+2025-03-04 15:09:41.528 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - ARGS : [{username=zhangsan, password=login123}]
+2025-03-04 15:09:41.656 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - RESPONSE : <401 UNAUTHORIZED Unauthorized,{message=用户名或密码错误, status=error},[]>
+2025-03-04 15:09:41.656 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - SPEND TIME : 129
+2025-03-04 15:10:34.498 [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-03-04 15:10:34.509 [Thread-13] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-03-04 15:10:34.741 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 30124 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 15:10:34.741 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 15:10:34.741 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 15:10:35.108 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 15:10:35.108 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:10:35.108 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 15:10:35.109 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 15:10:35.121 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 15:10:35.121 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 380 ms
+2025-03-04 15:10:36.393 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 15:10:36.403 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:10:36.408 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 15:10:36.413 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 1.714 seconds (JVM running for 173.162)
+2025-03-04 15:10:36.416 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-04 15:10:54.425 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 30124 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 15:10:54.425 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 15:10:54.426 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 15:10:54.716 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 15:10:54.717 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:10:54.717 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 15:10:54.717 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 15:10:54.731 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 15:10:54.731 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 301 ms
+2025-03-04 15:10:57.038 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 15:10:57.047 [restartedMain] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-03-04 15:10:57.051 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 15:10:57.056 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 2.667 seconds (JVM running for 193.805)
+2025-03-04 15:10:57.058 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-04 15:10:59.604 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-04 15:10:59.605 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-03-04 15:10:59.606 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2025-03-04 15:10:59.610 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - URL : http://localhost:8080/api/accounts/login
+2025-03-04 15:10:59.611 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - HTTP_METHOD : POST
+2025-03-04 15:10:59.611 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2025-03-04 15:10:59.611 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - CLASS_METHOD : com.maxcode.buyer.controller.AccountController.login
+2025-03-04 15:10:59.611 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - ARGS : [{username=zhangsan, password=login123}]
+2025-03-04 15:10:59.618 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-03-04 15:11:00.592 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-03-04 15:11:00.666 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - RESPONSE : <200 OK OK,{accountId=1, message=登录成功, status=success},[]>
+2025-03-04 15:11:00.668 [http-nio-8080-exec-2] INFO  c.maxcode.buyer.config.WebLogAspect - SPEND TIME : 1058
+2025-03-04 15:11:04.281 [http-nio-8080-exec-3] INFO  c.maxcode.buyer.config.WebLogAspect - URL : http://localhost:8080/api/accounts/login
+2025-03-04 15:11:04.281 [http-nio-8080-exec-3] INFO  c.maxcode.buyer.config.WebLogAspect - HTTP_METHOD : POST
+2025-03-04 15:11:04.281 [http-nio-8080-exec-3] INFO  c.maxcode.buyer.config.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2025-03-04 15:11:04.281 [http-nio-8080-exec-3] INFO  c.maxcode.buyer.config.WebLogAspect - CLASS_METHOD : com.maxcode.buyer.controller.AccountController.login
+2025-03-04 15:11:04.281 [http-nio-8080-exec-3] INFO  c.maxcode.buyer.config.WebLogAspect - ARGS : [{username=zhangsan, password=login1213}]
+2025-03-04 15:11:04.407 [http-nio-8080-exec-3] INFO  c.maxcode.buyer.config.WebLogAspect - RESPONSE : <401 UNAUTHORIZED Unauthorized,{message=用户名或密码错误, status=error},[]>
+2025-03-04 15:11:04.407 [http-nio-8080-exec-3] INFO  c.maxcode.buyer.config.WebLogAspect - SPEND TIME : 126
+2025-03-04 15:11:06.969 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - URL : http://localhost:8080/api/accounts/login
+2025-03-04 15:11:06.969 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - HTTP_METHOD : POST
+2025-03-04 15:11:06.970 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - IP : 0:0:0:0:0:0:0:1
+2025-03-04 15:11:06.970 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - CLASS_METHOD : com.maxcode.buyer.controller.AccountController.login
+2025-03-04 15:11:06.970 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - ARGS : [{username=zhangsan, password=login123}]
+2025-03-04 15:11:07.088 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - RESPONSE : <200 OK OK,{accountId=1, message=登录成功, status=success},[]>
+2025-03-04 15:11:07.089 [http-nio-8080-exec-4] INFO  c.maxcode.buyer.config.WebLogAspect - SPEND TIME : 120
+2025-03-04 19:37:46.642 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+2025-03-04 19:37:46.659 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+2025-03-04 19:37:52.703 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 30124 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 19:37:52.703 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 19:37:52.703 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 19:37:53.341 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 19:37:53.343 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 19:37:53.343 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 19:37:53.377 [restartedMain] INFO  o.a.c.c.C.[Tomcat-2].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 19:37:53.377 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 669 ms
+2025-03-04 19:37:56.356 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 19:37:56.387 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 19:37:56.391 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 3.776 seconds (JVM running for 16213.146)
+2025-03-04 19:37:56.391 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-04 21:09:46.179 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 30124 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 21:09:46.179 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 21:09:46.179 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 21:09:46.485 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 21:09:46.485 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 21:09:46.485 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 21:09:46.509 [restartedMain] INFO  o.a.c.c.C.[Tomcat-4].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 21:09:46.509 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 314 ms
+2025-03-04 21:09:47.717 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 21:09:47.730 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 21:09:47.730 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 1.567 seconds (JVM running for 21724.486)
+2025-03-04 21:09:47.730 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-04 21:13:42.610 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 30124 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 21:13:42.610 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 21:13:42.610 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 21:13:43.110 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 21:13:43.111 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 21:13:43.111 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 21:13:43.131 [restartedMain] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 21:13:43.131 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 503 ms
+2025-03-04 21:13:45.879 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 21:13:45.910 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 21:13:45.910 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 3.379 seconds (JVM running for 21962.666)
+2025-03-04 21:13:45.910 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-04 21:48:28.651 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 30124 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 21:48:28.651 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 21:48:28.651 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 21:48:28.797 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 21:48:28.798 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 21:48:28.798 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 21:48:28.801 [restartedMain] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 21:48:28.801 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 150 ms
+2025-03-04 21:48:29.510 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 21:48:29.522 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 21:48:29.524 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 0.885 seconds (JVM running for 24046.275)
+2025-03-04 21:48:29.526 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-04 21:49:08.370 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 30124 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 21:49:08.370 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 21:49:08.370 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 21:49:08.511 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 21:49:08.511 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 21:49:08.511 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 21:49:08.527 [restartedMain] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 21:49:08.527 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 157 ms
+2025-03-04 21:49:09.283 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 21:49:09.293 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 21:49:09.302 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 0.939 seconds (JVM running for 24086.052)
+2025-03-04 21:49:09.302 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-04 21:49:11.499 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 30124 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 21:49:11.499 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 21:49:11.499 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 21:49:11.622 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 21:49:11.622 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 21:49:11.622 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 21:49:11.638 [restartedMain] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 21:49:11.638 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 139 ms
+2025-03-04 21:49:12.522 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 21:49:12.538 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 21:49:12.538 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 1.056 seconds (JVM running for 24089.292)
+2025-03-04 21:49:12.538 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-04 21:51:07.232 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 30124 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 21:51:07.233 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 21:51:07.233 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 21:51:07.876 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 21:51:07.878 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 21:51:07.878 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 21:51:07.903 [restartedMain] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 21:51:07.903 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 666 ms
+2025-03-04 21:51:09.795 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 21:51:09.808 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 21:51:09.812 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 2.622 seconds (JVM running for 24206.563)
+2025-03-04 21:51:09.814 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-03-04 21:51:13.556 [restartedMain] INFO  com.maxcode.buyer.App - Starting App using Java 1.8.0_322 on DESKTOP-TFLOQ2O with PID 30124 (D:\github-code\spring-vue-code1\SpringBoot-vue\target\classes started by DXM-0808 in D:\github-code\spring-vue-code1\SpringBoot-vue)
+2025-03-04 21:51:13.557 [restartedMain] DEBUG com.maxcode.buyer.App - Running with Spring Boot v2.7.0, Spring v5.3.20
+2025-03-04 21:51:13.557 [restartedMain] INFO  com.maxcode.buyer.App - No active profile set, falling back to 1 default profile: "default"
+2025-03-04 21:51:13.888 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2025-03-04 21:51:13.889 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-03-04 21:51:13.889 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.63]
+2025-03-04 21:51:13.902 [restartedMain] INFO  o.a.c.c.C.[Tomcat-6].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-03-04 21:51:13.902 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 339 ms
+2025-03-04 21:51:14.970 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-03-04 21:51:14.978 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2025-03-04 21:51:14.982 [restartedMain] INFO  com.maxcode.buyer.App - Started App in 1.478 seconds (JVM running for 24211.732)
+2025-03-04 21:51:14.983 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投资产品App原型</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .prototype-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(392px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+            background: #f5f5f7;
+        }
+        .phone-frame {
+            width: 392px;
+            height: 852px;
+            background: white;
+            border-radius: 40px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            border: 1px solid #e0e0e0;
+        }
+        .status-bar {
+            height: 47px;
+            background: #000;
+            position: relative;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            border-top-left-radius: 40px;
+            border-top-right-radius: 40px;
+        }
+        .status-bar::after {
+            content: '';
+            position: absolute;
+            top: 11px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40%;
+            height: 25px;
+            background: #000;
+            border-radius: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: calc(100% - 47px);
+            border: none;
+            background: white;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="prototype-container">
+        <!-- 登录页面 -->
+        <div class="phone-frame">
+            <div class="status-bar">
+                <span>9:41</span>
+                <div>
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi ml-2"></i>
+                    <i class="fas fa-battery-full ml-2"></i>
+                </div>
+            </div>
+            <iframe src="login.html" scrolling="no"></iframe>
+        </div>
+
+        <!-- 主页面 -->
+        <div class="phone-frame">
+            <div class="status-bar">
+                <span>9:41</span>
+                <div>
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi ml-2"></i>
+                    <i class="fas fa-battery-full ml-2"></i>
+                </div>
+            </div>
+            <iframe src="home.html" scrolling="no"></iframe>
+        </div>
+
+        <!-- 投资任务页 -->
+        <div class="phone-frame">
+            <div class="status-bar">
+                <span>9:41</span>
+                <div>
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi ml-2"></i>
+                    <i class="fas fa-battery-full ml-2"></i>
+                </div>
+            </div>
+            <iframe src="tasks.html" scrolling="no"></iframe>
+        </div>
+
+        <!-- 订单列表页 -->
+        <div class="phone-frame">
+            <div class="status-bar">
+                <span>9:41</span>
+                <div>
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi ml-2"></i>
+                    <i class="fas fa-battery-full ml-2"></i>
+                </div>
+            </div>
+            <iframe src="orders.html" scrolling="no"></iframe>
+        </div>
+
+        <!-- 个人信息页 -->
+        <div class="phone-frame">
+            <div class="status-bar">
+                <span>9:41</span>
+                <div>
+                    <i class="fas fa-signal"></i>
+                    <i class="fas fa-wifi ml-2"></i>
+                    <i class="fas fa-battery-full ml-2"></i>
+                </div>
+            </div>
+            <iframe src="profile.html" scrolling="no"></iframe>
+        </div>
+    </div>
+</body>
+</html>

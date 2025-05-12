@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人信息</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <style>
+        body {
+            max-width: 392px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .bottom-tab-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: 392px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 10px 0;
+            border-top: 1px solid rgba(50, 149, 122, 0.1);
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        .profile-content {
+            height: calc(100vh - 80px);
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body class="tech-bg-1 pb-16">
+    <div class="profile-content">
+        <!-- 头像区域 -->
+        <div class="tech-card p-8">
+            <div class="flex flex-col items-center">
+                <div class="relative">
+                    <div class="w-24 h-24 rounded-full overflow-hidden hologram">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=200&h=200&fit=crop" alt="Avatar" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                    <button class="absolute bottom-0 right-0 tech-button w-8 h-8 rounded-full flex items-center justify-center text-white neon-border">
+                        <i class="fas fa-camera"></i>
+                    </button>
+                </div>
+                <h2 class="text-xl font-semibold mt-4 text-green-400">张小明</h2>
+                <p class="text-green-400/70 text-sm mt-1">ID: 888888</p>
+            </div>
+        </div>
+
+        <!-- 信息编辑区域 -->
+        <div class="mt-4">
+            <div class="tech-card">
+                <div class="p-3 border-b border-green-400/20 flex justify-between items-center">
+                    <div class="flex-1">
+                        <label class="text-green-400/70 text-sm">用户名</label>
+                        <input type="text" value="张小明" class="block w-full mt-1 border-none p-0 focus:ring-0 text-base bg-transparent text-green-400">
+                    </div>
+                    <i class="fas fa-chevron-right text-green-400/50"></i>
+                </div>
+                <div class="p-3 border-b border-green-400/20 flex justify-between items-center">
+                    <div class="flex-1">
+                        <label class="text-green-400/70 text-sm">性别</label>
+                        <select class="block w-full mt-1 border-none p-0 focus:ring-0 bg-transparent text-green-400 appearance-none">
+                            <option>男</option>
+                            <option>女</option>
+                            <option>保密</option>
+                        </select>
+                    </div>
+                    <i class="fas fa-chevron-right text-green-400/50"></i>
+                </div>
+            </div>
+
+            <div class="tech-card mt-4">
+                <div class="p-3 border-b border-green-400/20 flex justify-between items-center">
+                    <div class="flex-1">
+                        <label class="text-green-400/70 text-sm">登录密码</label>
+                        <input type="password" value="********" class="block w-full mt-1 border-none p-0 focus:ring-0 text-base bg-transparent text-green-400" readonly>
+                    </div>
+                    <button class="text-green-400 text-sm font-medium">修改</button>
+                </div>
+                <div class="p-3 border-b border-green-400/20 flex justify-between items-center">
+                    <div class="flex-1">
+                        <label class="text-green-400/70 text-sm">提现密码</label>
+                        <input type="password" value="********" class="block w-full mt-1 border-none p-0 focus:ring-0 text-base bg-transparent text-green-400" readonly>
+                    </div>
+                    <button class="text-green-400 text-sm font-medium">修改</button>
+                </div>
+            </div>
+
+            <div class="p-4">
+                <button class="tech-button w-full text-white py-3.5 rounded-2xl text-lg font-semibold neon-border">
+                    退出登录
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div class="bottom-tab-bar">
+        <div class="flex justify-around">
+            <a href="#" class="flex flex-col items-center text-green-400/50">
+                <i class="fas fa-home text-xl"></i>
+                <span class="text-xs mt-1">首页</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-green-400/50">
+                <i class="fas fa-tasks text-xl"></i>
+                <span class="text-xs mt-1">任务</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-green-400/50">
+                <i class="fas fa-list text-xl"></i>
+                <span class="text-xs mt-1">订单</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-green-400">
+                <i class="fas fa-user text-xl"></i>
+                <span class="text-xs mt-1">我的</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html> 

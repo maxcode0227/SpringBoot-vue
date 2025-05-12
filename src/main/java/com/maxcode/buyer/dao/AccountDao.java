@@ -12,7 +12,7 @@ import com.maxcode.buyer.entities.Account;
 import java.util.List;
 
 @Mapper
-public interface AccountRepository extends BaseMapper<Account> {
+public interface AccountDao extends BaseMapper<Account> {
     
     @Select("SELECT * FROM accounts WHERE id = #{id}")
     Account findById(@Param("id") Long id);

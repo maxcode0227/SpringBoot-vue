@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maxcode.buyer.dao.VipLevelDao">
+
+    <!-- 基础结果映射 -->
+    <resultMap id="BaseResultMap" type="com.maxcode.buyer.entities.VipLevel">
+        <id column="id" property="id"/>
+        <result column="level" property="level"/>
+        <result column="threshold_amount" property="thresholdAmount"/>
+        <result column="threshold_orders" property="thresholdOrders"/>
+        <result column="rate" property="rate"/>
+        <result column="image_url" property="imageUrl"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <!-- 根据多个条件查询VIP等级 -->
+    <select id="findByMultipleConditions" resultMap="BaseResultMap">
+        SELECT * FROM vip_levels
+        <where>
+            <if test="level != null">
+                AND level = #{level}
+            </if>
+            <if test="minThresholdAmount != null">
+                AND threshold_amount >= #{minThresholdAmount}
+            </if>
+            <if test="maxThresholdAmount != null">
+                AND threshold_amount &lt;= #{maxThresholdAmount}
+            </if>
+            <if test="minThresholdOrders != null">
+                AND threshold_orders >= #{minThresholdOrders}
+            </if>
+            <if test="maxThresholdOrders != null">
+                AND threshold_orders &lt;= #{maxThresholdOrders}
+            </if>
+            <if test="minRate != null">
+                AND rate >= #{minRate}
+            </if>
+            <if test="maxRate != null">
+                AND rate &lt;= #{maxRate}
+            </if>
+            <if test="startTime != null">
+                AND create_time >= #{startTime}
+            </if>
+            <if test="endTime != null">
+                AND create_time &lt;= #{endTime}
+            </if>
+        </where>
+        ORDER BY level ASC
+    </select>
+
+    <!-- 更新VIP等级信息 -->
+    <update id="updateVipLevelSelective">
+        UPDATE vip_levels
+        <set>
+            <if test="level != null">level = #{level},</if>
+            <if test="thresholdAmount != null">threshold_amount = #{thresholdAmount},</if>
+            <if test="thresholdOrders != null">threshold_orders = #{thresholdOrders},</if>
+            <if test="rate != null">rate = #{rate},</if>
+            <if test="imageUrl != null">image_url = #{imageUrl},</if>
+            update_time = NOW()
+        </set>
+        WHERE id = #{id}
+    </update>
+
+    <!-- 查找符合条件的最高VIP等级 -->
+    <select id="findEligibleVipLevel" resultMap="BaseResultMap">
+        SELECT * FROM vip_levels 
+        WHERE threshold_amount &lt;= #{amount} 
+        AND threshold_orders &lt;= #{orders}
+        ORDER BY level DESC 
+        LIMIT 1
+    </select>
+
+</mapper> 

@@ -1,0 +1,69 @@
+
+-- coin_box.accounts definition
+
+CREATE TABLE `accounts` (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `username` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '用户名称',
+  `avatar_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '头像URL',
+  `gender` varchar(10) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '性别',
+  `withdraw_password` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '提取密码',
+  `login_password` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '登录密码',
+  `vip_level` int DEFAULT '1' COMMENT 'VIP等级',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_username` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='账户表';
+
+
+
+-- coin_box.account_balance definition
+
+CREATE TABLE `account_balance` (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `uid` bigint NOT NULL COMMENT '用户ID',
+  `total_amount` decimal(12,2) NOT NULL DEFAULT '0.00' COMMENT '总金额',
+  `total_profit` decimal(12,2) NOT NULL DEFAULT '0.00' COMMENT '总利润',
+  `frozen_amount` decimal(12,2) NOT NULL DEFAULT '0.00' COMMENT '冻结金额',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_uid` (`uid`),
+  KEY `idx_create_time` (`create_time`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='账户金额表';
+
+
+-- coin_box.vip_levels definition
+
+CREATE TABLE `vip_levels` (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT 'VIP等级ID',
+  `level` int NOT NULL COMMENT 'VIP等级',
+  `threshold_amount` decimal(12,2) NOT NULL COMMENT '门槛金额',
+  `threshold_orders` int NOT NULL COMMENT '门槛订单数量',
+  `rate` decimal(5,2) NOT NULL COMMENT '利率（百分比）',
+  `image_url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'VIP等级图标URL',
+  `create_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_level` (`level`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='VIP等级表';
+
+
+
+CREATE TABLE `orders` (
+  `id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键ID',
+  `uid` bigint NOT NULL COMMENT '用户ID',
+  `status` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '订单状态',
+  `amount` decimal(12,2) NOT NULL COMMENT '订单金额',
+  `rate` decimal(5,2) NOT NULL COMMENT '利润率(%)',
+  `profit` decimal(12,2) NOT NULL COMMENT '利润金额',
+  `duration` int NOT NULL DEFAULT 0 COMMENT '投资时间(天)',
+  `product_id` bigint NOT NULL COMMENT '商品ID',
+  `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+  `update_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  PRIMARY KEY (`id`),
+  KEY `idx_uid` (`uid`),
+  KEY `idx_product_id` (`product_id`),
+  KEY `idx_create_time` (`create_time`),
+  KEY `idx_status` (`status`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='订单记录表';

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maxcode.buyer.dao.ProductDao">
+
+    <!-- 基础结果映射 -->
+    <resultMap id="BaseResultMap" type="com.maxcode.buyer.entities.Product">
+        <id column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="amount" property="amount"/>
+        <result column="image_url" property="imageUrl"/>
+        <result column="duration" property="duration"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <!-- 根据多个条件查询商品 -->
+    <select id="findByMultipleConditions" resultMap="BaseResultMap">
+        SELECT * FROM products
+        <where>
+            <if test="name != null and name != ''">
+                AND name LIKE CONCAT('%', #{name}, '%')
+            </if>
+            <if test="minAmount != null">
+                AND amount >= #{minAmount}
+            </if>
+            <if test="maxAmount != null">
+                AND amount &lt;= #{maxAmount}
+            </if>
+            <if test="minDuration != null">
+                AND duration >= #{minDuration}
+            </if>
+            <if test="maxDuration != null">
+                AND duration &lt;= #{maxDuration}
+            </if>
+            <if test="startTime != null">
+                AND create_time >= #{startTime}
+            </if>
+            <if test="endTime != null">
+                AND create_time &lt;= #{endTime}
+            </if>
+        </where>
+        ORDER BY create_time DESC
+    </select>
+
+    <!-- 更新商品信息 -->
+    <update id="updateProductSelective">
+        UPDATE products
+        <set>
+            <if test="name != null">name = #{name},</if>
+            <if test="amount != null">amount = #{amount},</if>
+            <if test="imageUrl != null">image_url = #{imageUrl},</if>
+            <if test="duration != null">duration = #{duration},</if>
+            update_time = NOW()
+        </set>
+        WHERE id = #{id}
+    </update>
+
+</mapper> 

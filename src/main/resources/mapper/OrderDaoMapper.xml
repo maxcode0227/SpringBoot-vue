@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maxcode.buyer.dao.OrderDao">
+
+    <!-- 基础结果映射 -->
+    <resultMap id="BaseResultMap" type="com.maxcode.buyer.entities.Order">
+        <id column="id" property="id"/>
+        <result column="uid" property="uid"/>
+        <result column="status" property="status"/>
+        <result column="amount" property="amount"/>
+        <result column="rate" property="rate"/>
+        <result column="profit" property="profit"/>
+        <result column="duration" property="duration"/>
+        <result column="product_id" property="productId"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <!-- 根据多个条件查询订单 -->
+    <select id="findByMultipleConditions" resultMap="BaseResultMap">
+        SELECT * FROM orders
+        <where>
+            <if test="uid != null">
+                AND uid = #{uid}
+            </if>
+            <if test="productId != null">
+                AND product_id = #{productId}
+            </if>
+            <if test="status != null and status != ''">
+                AND status = #{status}
+            </if>
+            <if test="minAmount != null">
+                AND amount >= #{minAmount}
+            </if>
+            <if test="maxAmount != null">
+                AND amount &lt;= #{maxAmount}
+            </if>
+            <if test="minProfit != null">
+                AND profit >= #{minProfit}
+            </if>
+            <if test="maxProfit != null">
+                AND profit &lt;= #{maxProfit}
+            </if>
+            <if test="startTime != null">
+                AND create_time >= #{startTime}
+            </if>
+            <if test="endTime != null">
+                AND create_time &lt;= #{endTime}
+            </if>
+        </where>
+        ORDER BY create_time DESC
+    </select>
+
+    <!-- 更新订单信息 -->
+    <update id="updateOrderSelective">
+        UPDATE orders
+        <set>
+            <if test="uid != null">uid = #{uid},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="amount != null">amount = #{amount},</if>
+            <if test="rate != null">rate = #{rate},</if>
+            <if test="profit != null">profit = #{profit},</if>
+            <if test="duration != null">duration = #{duration},</if>
+            <if test="productId != null">product_id = #{productId},</if>
+            update_time = NOW()
+        </set>
+        WHERE id = #{id}
+    </update>
+
+</mapper> 

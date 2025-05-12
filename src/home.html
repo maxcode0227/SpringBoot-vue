@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主页</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <style>
+        body {
+            max-width: 392px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .bottom-tab-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: 392px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 10px 0;
+            border-top: 1px solid rgba(50, 149, 122, 0.1);
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="tech-bg-2 pb-16">
+    <!-- Logo区域 -->
+    <div class="p-4 tech-card">
+        <img src="images/logo2.png" alt="Logo" class="h-6 object-contain hologram">
+    </div>
+
+    <!-- 功能入口区域 -->
+    <div class="grid grid-cols-4 gap-4 p-4 tech-card mt-2">
+        <a href="#" class="flex flex-col items-center neon-border">
+            <div class="w-14 h-14 bg-white/50 rounded-2xl flex items-center justify-center mb-1 data-flow">
+                <i class="fas fa-play text-gray-700 text-xl"></i>
+            </div>
+            <span class="text-sm text-gray-700">开始任务</span>
+        </a>
+        <a href="#" class="flex flex-col items-center neon-border">
+            <div class="w-14 h-14 bg-white/50 rounded-2xl flex items-center justify-center mb-1 data-flow">
+                <i class="fas fa-certificate text-gray-700 text-xl"></i>
+            </div>
+            <span class="text-sm text-gray-700">证书</span>
+        </a>
+        <a href="#" class="flex flex-col items-center neon-border">
+            <div class="w-14 h-14 bg-white/50 rounded-2xl flex items-center justify-center mb-1 data-flow">
+                <i class="fas fa-wallet text-gray-700 text-xl"></i>
+            </div>
+            <span class="text-sm text-gray-700">提现</span>
+        </a>
+        <a href="#" class="flex flex-col items-center neon-border">
+            <div class="w-14 h-14 bg-white/50 rounded-2xl flex items-center justify-center mb-1 data-flow">
+                <i class="fas fa-headset text-gray-700 text-xl"></i>
+            </div>
+            <span class="text-sm text-gray-700">客服</span>
+        </a>
+        <a href="#" class="flex flex-col items-center neon-border">
+            <div class="w-14 h-14 bg-white/50 rounded-2xl flex items-center justify-center mb-1 data-flow">
+                <i class="fas fa-book text-gray-700 text-xl"></i>
+            </div>
+            <span class="text-sm text-gray-700">条例</span>
+        </a>
+        <a href="#" class="flex flex-col items-center neon-border">
+            <div class="w-14 h-14 bg-white/50 rounded-2xl flex items-center justify-center mb-1 data-flow">
+                <i class="fas fa-bullhorn text-gray-700 text-xl"></i>
+            </div>
+            <span class="text-sm text-gray-700">公告</span>
+        </a>
+        <a href="#" class="flex flex-col items-center neon-border">
+            <div class="w-14 h-14 bg-white/50 rounded-2xl flex items-center justify-center mb-1 data-flow">
+                <i class="fas fa-question-circle text-gray-700 text-xl"></i>
+            </div>
+            <span class="text-sm text-gray-700">FAQ</span>
+        </a>
+        <a href="#" class="flex flex-col items-center neon-border">
+            <div class="w-14 h-14 bg-white/50 rounded-2xl flex items-center justify-center mb-1 data-flow">
+                <i class="fas fa-info-circle text-gray-700 text-xl"></i>
+            </div>
+            <span class="text-sm text-gray-700">关于我们</span>
+        </a>
+    </div>
+
+    <!-- VIP等级展示 -->
+    <div class="p-4 tech-card mt-2">
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-lg font-semibold text-gray-800">当前等级：VIP1</h3>
+            <button class="text-gray-600 flex items-center" onclick="document.getElementById('vipModal').classList.remove('hidden')">
+                查看更多 <i class="fas fa-chevron-right ml-1"></i>
+            </button>
+        </div>
+        <div class="bg-white/50 rounded-2xl p-4">
+            <div class="flex justify-between items-center mb-2">
+                <span class="text-gray-600">完成订单：5/10</span>
+                <span class="text-gray-600">收益率：0.3%</span>
+            </div>
+            <div class="w-full bg-gray-100 rounded-full h-2">
+                <div class="bg-green-400 h-2 rounded-full data-flow" style="width: 50%"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIP等级弹窗 -->
+    <div id="vipModal" class="hidden fixed inset-0 bg-black/10 backdrop-blur-sm flex items-center justify-center" style="max-width: 392px; margin: 0 auto;">
+        <div class="tech-card rounded-2xl w-11/12 max-w-md">
+            <div class="p-4 border-b border-gray-100 flex justify-between items-center">
+                <h3 class="text-lg font-semibold text-gray-800">VIP等级说明</h3>
+                <button onclick="document.getElementById('vipModal').classList.add('hidden')" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-50 text-gray-500">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-4 space-y-4">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h4 class="font-semibold text-gray-800">VIP1</h4>
+                        <p class="text-sm text-gray-500">完成10单/400元订单</p>
+                    </div>
+                    <span class="text-gray-800">收益率0.3%</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h4 class="font-semibold text-gray-800">VIP2</h4>
+                        <p class="text-sm text-gray-500">完成20单/800元订单</p>
+                    </div>
+                    <span class="text-gray-800">收益率0.5%</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h4 class="font-semibold text-gray-800">VIP3</h4>
+                        <p class="text-sm text-gray-500">完成30单/1600元订单</p>
+                    </div>
+                    <span class="text-gray-800">收益率1%</span>
+                </div>
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h4 class="font-semibold text-gray-800">VIP4</h4>
+                        <p class="text-sm text-gray-500">完成40单/3000元订单</p>
+                    </div>
+                    <span class="text-gray-800">收益率1.5%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div class="bottom-tab-bar">
+        <div class="flex justify-around">
+            <a href="#" class="flex flex-col items-center text-green-600">
+                <i class="fas fa-home text-xl"></i>
+                <span class="text-xs mt-1">首页</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-tasks text-xl"></i>
+                <span class="text-xs mt-1">任务</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-list text-xl"></i>
+                <span class="text-xs mt-1">订单</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-user text-xl"></i>
+                <span class="text-xs mt-1">我的</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html> 

@@ -1,7 +1,7 @@
 package com.maxcode.buyer.controller;
 
 import com.maxcode.buyer.entities.Account;
-import com.maxcode.buyer.dao.AccountRepository;
+import com.maxcode.buyer.dao.AccountDao;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +21,7 @@ import java.util.HashMap;
 public class AccountController {
 
     @Autowired
-    private AccountRepository accountRepository;
+    private AccountDao accountDao;
 
     @Value("${com.boylegu.paginatio.max-per-page}")
     Integer maxPerPage;
@@ -42,7 +42,7 @@ public class AccountController {
             queryWrapper.eq("vip_level", vipLevel);
         }
         
-        Page<Account> result = accountRepository.selectPage(pageable, queryWrapper);
+        Page<Account> result = accountDao.selectPage(pageable, queryWrapper);
         
         Map<String, Object> response = new HashMap<>();
         response.put("content", result.getRecords());
@@ -55,7 +55,7 @@ public class AccountController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<?> getAccount(@PathVariable Long id) {
-        Account account = accountRepository.selectById(id);
+        Account account = accountDao.selectById(id);
         if (account == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -64,30 +64,30 @@ public class AccountController {
 
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<?> createAccount(@RequestBody Account account) {
-        accountRepository.insert(account);
+        accountDao.insert(account);
         return new ResponseEntity<>(account, HttpStatus.CREATED);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public ResponseEntity<?> updateAccount(@PathVariable Long id, @RequestBody Account account) {
-        Account existingAccount = accountRepository.selectById(id);
+        Account existingAccount = accountDao.selectById(id);
         if (existingAccount == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
         account.setId(id);
-        accountRepository.updateById(account);
+        accountDao.updateById(account);
         return new ResponseEntity<>(account, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<?> deleteAccount(@PathVariable Long id) {
-        Account account = accountRepository.selectById(id);
+        Account account = accountDao.selectById(id);
         if (account == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
 
-        accountRepository.deleteById(id);
+        accountDao.deleteById(id);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
@@ -98,7 +98,7 @@ public class AccountController {
         
         Page<Account> pageable = new Page<>(page, maxPerPage);
         return new ResponseEntity<>(
-            accountRepository.findByVipLevel(level, pageable), 
+            accountDao.findByVipLevel(level, pageable), 
             HttpStatus.OK
         );
     }
@@ -114,7 +114,7 @@ public class AccountController {
 
         String encryptedPassword = DigestUtils.md5DigestAsHex(password.getBytes());
         
-        Account account = accountRepository.findByUsernameAndPassword(username, encryptedPassword);
+        Account account = accountDao.findByUsernameAndPassword(username, encryptedPassword);
         
         Map<String, Object> response = new HashMap<>();
         if (account != null) {

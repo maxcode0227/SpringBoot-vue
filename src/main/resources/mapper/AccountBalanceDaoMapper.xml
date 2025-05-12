@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.maxcode.buyer.dao.AccountBalanceDao">
+
+    <!-- 基础结果映射 -->
+    <resultMap id="BaseResultMap" type="com.maxcode.buyer.entities.AccountBalance">
+        <id column="id" property="id"/>
+        <result column="uid" property="uid"/>
+        <result column="total_amount" property="totalAmount"/>
+        <result column="total_profit" property="totalProfit"/>
+        <result column="frozen_amount" property="frozenAmount"/>
+        <result column="create_time" property="createTime"/>
+        <result column="update_time" property="updateTime"/>
+    </resultMap>
+
+    <!-- 根据多个条件查询账户余额 -->
+    <select id="findByMultipleConditions" resultMap="BaseResultMap">
+        SELECT * FROM account_balance
+        <where>
+            <if test="uid != null">
+                AND uid = #{uid}
+            </if>
+            <if test="minTotalAmount != null">
+                AND total_amount >= #{minTotalAmount}
+            </if>
+            <if test="maxTotalAmount != null">
+                AND total_amount &lt;= #{maxTotalAmount}
+            </if>
+            <if test="minTotalProfit != null">
+                AND total_profit >= #{minTotalProfit}
+            </if>
+            <if test="maxTotalProfit != null">
+                AND total_profit &lt;= #{maxTotalProfit}
+            </if>
+            <if test="startTime != null">
+                AND create_time >= #{startTime}
+            </if>
+            <if test="endTime != null">
+                AND create_time &lt;= #{endTime}
+            </if>
+        </where>
+        ORDER BY id ASC
+    </select>
+
+    <!-- 更新账户余额信息 -->
+    <update id="updateAccountBalanceSelective">
+        UPDATE account_balance
+        <set>
+            <if test="uid != null">uid = #{uid},</if>
+            <if test="totalAmount != null">total_amount = #{totalAmount},</if>
+            <if test="totalProfit != null">total_profit = #{totalProfit},</if>
+            <if test="frozenAmount != null">frozen_amount = #{frozenAmount},</if>
+            update_time = NOW()
+        </set>
+        WHERE id = #{id}
+    </update>
+
+</mapper> 

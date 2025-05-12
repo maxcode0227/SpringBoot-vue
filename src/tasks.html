@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投资任务</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <style>
+        body {
+            max-width: 392px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        .bottom-tab-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            max-width: 392px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 10px 0;
+            border-top: 1px solid rgba(50, 149, 122, 0.1);
+        }
+        .product-carousel {
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding: 1rem;
+            margin: 0 -1rem;
+        }
+        .product-card {
+            scroll-snap-align: start;
+        }
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="tech-bg-3 pb-16">
+    <!-- 商品轮播区 -->
+    <div class="product-carousel flex space-x-4">
+        <div class="product-card flex-none w-72 tech-card rounded-2xl overflow-hidden neon-border">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=400&h=300&fit=crop" alt="Product" class="w-full h-48 object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            </div>
+            <div class="p-4">
+                <h3 class="font-semibold text-gray-800">Apple Watch Series 7</h3>
+                <p class="text-sm text-gray-500 mt-1">限时特惠 | 运动监测</p>
+                <div class="flex justify-between items-center mt-2">
+                    <span class="text-gray-800 text-lg font-semibold">¥3299</span>
+                    <span class="text-sm text-gray-500">库存: 99</span>
+                </div>
+            </div>
+        </div>
+        <div class="product-card flex-none w-72 tech-card rounded-2xl overflow-hidden neon-border">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop" alt="Product" class="w-full h-48 object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            </div>
+            <div class="p-4">
+                <h3 class="font-semibold text-gray-800">AirPods Pro</h3>
+                <p class="text-sm text-gray-500 mt-1">新品上市 | 主动降噪</p>
+                <div class="flex justify-between items-center mt-2">
+                    <span class="text-gray-800 text-lg font-semibold">¥1999</span>
+                    <span class="text-sm text-gray-500">库存: 188</span>
+                </div>
+            </div>
+        </div>
+        <div class="product-card flex-none w-72 tech-card rounded-2xl overflow-hidden neon-border">
+            <div class="relative">
+                <img src="https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?w=400&h=300&fit=crop" alt="Product" class="w-full h-48 object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+            </div>
+            <div class="p-4">
+                <h3 class="font-semibold text-gray-800">小米手环 7</h3>
+                <p class="text-sm text-gray-500 mt-1">运动必备 | 续航持久</p>
+                <div class="flex justify-between items-center mt-2">
+                    <span class="text-gray-800 text-lg font-semibold">¥299</span>
+                    <span class="text-sm text-gray-500">库存: 256</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 提交按钮 -->
+    <div class="p-4">
+        <button class="tech-button w-full text-white py-4 rounded-2xl text-lg font-semibold neon-border" onclick="document.getElementById('submitModal').classList.remove('hidden')">
+            开始投资
+        </button>
+    </div>
+
+    <!-- 收益信息 -->
+    <div class="tech-card p-6 mt-4 rounded-3xl">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="text-center">
+                <p class="text-gray-500 text-sm">今日利润</p>
+                <p class="text-xl font-semibold text-gray-800">+¥88.88</p>
+            </div>
+            <div class="text-center border-l border-r border-gray-100">
+                <p class="text-gray-500 text-sm">目前金额</p>
+                <p class="text-xl font-semibold text-gray-800">¥1688.88</p>
+            </div>
+            <div class="text-center">
+                <p class="text-gray-500 text-sm">冻结金额</p>
+                <p class="text-xl font-semibold text-gray-800">¥500.00</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 提交弹窗 -->
+    <div id="submitModal" class="hidden fixed inset-0 bg-black/10 backdrop-blur-sm flex items-center justify-center" style="max-width: 392px; margin: 0 auto;">
+        <div class="tech-card rounded-2xl w-11/12 max-w-md">
+            <div class="p-4 border-b border-gray-100 flex justify-between items-center">
+                <h3 class="text-lg font-semibold text-gray-800">投资确认</h3>
+                <button onclick="document.getElementById('submitModal').classList.add('hidden')" class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-gray-50 text-gray-500">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="p-4">
+                <div class="bg-white/50 rounded-2xl p-4 mb-4">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=160&h=160&fit=crop" alt="Product" class="w-20 h-20 rounded-xl object-cover">
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-800">Apple Watch Series 7</h4>
+                            <p class="text-sm text-gray-500">订单号：ORDER2024031500001</p>
+                            <p class="text-gray-800 mt-2 text-lg font-semibold">¥3299</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2">
+                        <i class="fas fa-star text-2xl text-gray-300 cursor-pointer hover:text-green-400 transition-colors"></i>
+                        <i class="fas fa-star text-2xl text-gray-300 cursor-pointer hover:text-green-400 transition-colors"></i>
+                        <i class="fas fa-star text-2xl text-gray-300 cursor-pointer hover:text-green-400 transition-colors"></i>
+                        <i class="fas fa-star text-2xl text-gray-300 cursor-pointer hover:text-green-400 transition-colors"></i>
+                        <i class="fas fa-star text-2xl text-gray-300 cursor-pointer hover:text-green-400 transition-colors"></i>
+                    </div>
+                </div>
+                <button class="tech-button w-full text-white py-3 rounded-xl text-lg font-semibold neon-border">
+                    确认提交
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航栏 -->
+    <div class="bottom-tab-bar">
+        <div class="flex justify-around">
+            <a href="#" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-home text-xl"></i>
+                <span class="text-xs mt-1">首页</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-green-600">
+                <i class="fas fa-tasks text-xl"></i>
+                <span class="text-xs mt-1">任务</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-list text-xl"></i>
+                <span class="text-xs mt-1">订单</span>
+            </a>
+            <a href="#" class="flex flex-col items-center text-gray-400">
+                <i class="fas fa-user text-xl"></i>
+                <span class="text-xs mt-1">我的</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html> 

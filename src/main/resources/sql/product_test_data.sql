@@ -1,0 +1,22 @@
+-- 插入商品测试数据
+INSERT INTO products (name, amount, image_url, duration, create_time, update_time) VALUES 
+    ('黄金投资计划A', 1000.00, 'https://img.alicdn.com/imgextra/i4/O1CN01c26kx51IU5ZIp2Q3G_!!6000000000902-2-tps-800-800.png', 30, NOW(), NOW()),
+    ('白银理财产品B', 500.00, 'https://img.alicdn.com/imgextra/i2/O1CN01HK0ywc1W9MnTJTJ4p_!!6000000002748-2-tps-800-800.png', 60, NOW(), NOW()),
+    ('铂金投资计划C', 2000.00, 'https://img.alicdn.com/imgextra/i1/O1CN01FX8MTn1nx2NZjvLmP_!!6000000005155-2-tps-800-800.png', 90, NOW(), NOW()),
+    ('钻石理财产品D', 5000.00, 'https://img.alicdn.com/imgextra/i3/O1CN01Z5o3zs1mnXpqMqJ7h_!!6000000004999-2-tps-800-800.png', 180, NOW(), NOW()),
+    ('新手体验计划', 100.00, 'https://img.alicdn.com/imgextra/i4/O1CN01nAncyF1mzIItfzMqF_!!6000000005033-2-tps-800-800.png', 7, NOW(), NOW()),
+    ('月月盈计划', 3000.00, 'https://img.alicdn.com/imgextra/i2/O1CN01HwPTdr1RVpB5QQqwM_!!6000000002117-2-tps-800-800.png', 30, NOW(), NOW()),
+    ('季度理财宝', 8000.00, 'https://img.alicdn.com/imgextra/i1/O1CN01FyxYxP1POQl8h7f7F_!!6000000001829-2-tps-800-800.png', 90, NOW(), NOW()),
+    ('年度稳赢计划', 10000.00, 'https://img.alicdn.com/imgextra/i3/O1CN01Z5o3zs1mnXpqMqJ7h_!!6000000004999-2-tps-800-800.png', 365, NOW(), NOW()),
+    ('短期理财A', 1500.00, 'https://img.alicdn.com/imgextra/i4/O1CN01c26kx51IU5ZIp2Q3G_!!6000000000902-2-tps-800-800.png', 15, NOW(), NOW()),
+    ('中期投资B', 4000.00, 'https://img.alicdn.com/imgextra/i2/O1CN01HK0ywc1W9MnTJTJ4p_!!6000000002748-2-tps-800-800.png', 120, NOW(), NOW()),
+    ('长期理财C', 12000.00, 'https://img.alicdn.com/imgextra/i1/O1CN01FX8MTn1nx2NZjvLmP_!!6000000005155-2-tps-800-800.png', 240, NOW(), NOW()),
+    ('稳健理财D', 6000.00, 'https://img.alicdn.com/imgextra/i3/O1CN01Z5o3zs1mnXpqMqJ7h_!!6000000004999-2-tps-800-800.png', 150, NOW(), NOW()),
+    ('进取理财E', 15000.00, 'https://img.alicdn.com/imgextra/i4/O1CN01nAncyF1mzIItfzMqF_!!6000000005033-2-tps-800-800.png', 300, NOW(), NOW()),
+    ('保守理财F', 2500.00, 'https://img.alicdn.com/imgextra/i2/O1CN01HwPTdr1RVpB5QQqwM_!!6000000002117-2-tps-800-800.png', 45, NOW(), NOW()),
+    ('平衡理财G', 7000.00, 'https://img.alicdn.com/imgextra/i1/O1CN01FyxYxP1POQl8h7f7F_!!6000000001829-2-tps-800-800.png', 180, NOW(), NOW()),
+    ('成长理财H', 9000.00, 'https://img.alicdn.com/imgextra/i3/O1CN01Z5o3zs1mnXpqMqJ7h_!!6000000004999-2-tps-800-800.png', 270, NOW(), NOW()),
+    ('尊享理财I', 20000.00, 'https://img.alicdn.com/imgextra/i4/O1CN01c26kx51IU5ZIp2Q3G_!!6000000000902-2-tps-800-800.png', 365, NOW(), NOW()),
+    ('精英理财J', 25000.00, 'https://img.alicdn.com/imgextra/i2/O1CN01HK0ywc1W9MnTJTJ4p_!!6000000002748-2-tps-800-800.png', 400, NOW(), NOW()),
+    ('至尊理财K', 50000.00, 'https://img.alicdn.com/imgextra/i1/O1CN01FX8MTn1nx2NZjvLmP_!!6000000005155-2-tps-800-800.png', 450, NOW(), NOW()),
+    ('王者理财L', 100000.00, 'https://img.alicdn.com/imgextra/i3/O1CN01Z5o3zs1mnXpqMqJ7h_!!6000000004999-2-tps-800-800.png', 500, NOW(), NOW()); 
